@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  /* outline: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-oscuro: #101e2b;
+  --box-shadow: 0 0 10px rgba(16, 30, 43, 0.637);
+  --boton-llamar-background: linear-gradient(
+    to left,
+    #ff385c 0%,
+    #e61e4d 27.5%,
+    #e31c5f 40%,
+    #d70466 57.5%,
+    #bd1e59 75%,
+    #bd1e59 100%
+  );
+  --boton-whatsapp-background: linear-gradient(
+    to left,
+    #199692 0%,
+    #15b8aa 27.5%,
+    #13b1a1 40%,
+    #14a4a7 57.5%,
+    #00a1a1 100%
+  );
+  --background-main: linear-gradient(to right, #101e2b, #132233);
+  --text-shadow: 0 0 10px #101e2bd0;
+}
+body {
+  font-family: raleway, sans-serif;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1440px;
+  min-height: 200vh;
+  color: #101e2b;
+  position: relative;
+}
+
+/* --------HEADER-------- */
+.header {
+  width: 100%;
+  background: #101e2b;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.logo-container {
+}
+.fa-times-circle {
+  color: white;
+  font-size: 2rem;
+}
+.main-menu__items {
+  display: flex;
+  align-items: center;
+}
+.main-menu__item {
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.fa-user-circle {
+  margin: 0 0.5rem;
+}
+
+/* ----------MAIN------------- */
+.main {
+  width: 80%;
+  margin: 6rem auto 2rem;
+}
+.section-title {
+  margin: 1rem 0;
+  display: flex;
+}
+.container-title {
+  margin-right: 2rem;
+}
+.main-title {
+  margin: 0.5rem 0;
+}
+.reviews {
+}
+.fa-star {
+  color: #d70466;
+}
+.link-milan {
+  color: #101e2b;
+  text-decoration: underline;
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+/* GALLERY-SECTION */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* -----------MAIN-DIVISION------------- */
+.contact-section {
+  padding: 1rem 0;
+  border-radius: 12px;
+  height: 100%;
+}
+
+/* -------------SUMMARY DETAILS------------- */
+.summary__details-container {
+  margin: 1rem 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  border: 1px solid rgb(216, 217, 218);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.summary__details {
+  font-size: 1rem;
+  display: grid;
+  place-items: center;
+  line-height: 1.8;
+  border: 1px solid rgb(216, 217, 218);
+  padding: 1rem;
+}
+.icon-summary {
+  margin-right: 0.5rem;
+  width: 3rem;
+}
+.details-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.point {
+  margin: 0 0.5rem;
+}
+/* -----------BUTTONS-------------- */
+
+.buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+.button {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  border-radius: 6px;
+  background-size: 200% auto;
+}
+.button-call {
+  background-image: var(--boton-llamar-background);
+}
+.button-whatsapp {
+  background-image: var(--boton-whatsapp-background);
+}
+
+/* ---------GUIDE DESCRIPTION------- */
+.guide-description {
+  margin: 2rem 0;
+}
+.title {
+  margin: 1rem 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+.text {
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+/* -----------PLACES-SECTION------------ */
+.places-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+.link-reviews {
+  color: #bd1e59;
+  text-decoration: underline;
+}
+.places__container {
+  margin-bottom: 1rem;
+}
+.list-places {
+  list-style: none;
+  line-height: 1.7;
+  background-color: #1322332f;
+  display: inline-block;
+  margin: 0.2rem 0.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+/* --------------PRICES----------- */
+.prices-section {
+}
+.prices-container {
+  border: 1px solid;
+  overflow: hidden;
+  border-radius: 12px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+.price-container {
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #132233;
+  display: grid;
+  place-items: center;
+}
+.price-amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* ------------REVIEWS----------- */
+.reviews-title {
+  font-size: 1.5rem;
+}

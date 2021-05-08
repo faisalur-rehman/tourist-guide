@@ -1,13 +1,207 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+:root {
+  --primaryTextColor: #000;
+  --secondaryTextColor: #1889c5;
+  --tertiaryTextColor: #3a4972;
+  --gTextColor: #007f7b;
+  --whiteTextColor: #ffffff;
+  --starColor: #fea700;
+  --btnColor: #132240;
+  /* --cardBg: #f6f2ec; */
+}
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+header {
+  background-color: #e9ecef;
+  color: var(--primaryTextColor);
+}
+
+.right p {
+  margin: 10px;
+}
+
+navbar .input-group-text {
+  background-color: white;
+  border-right: 1px solid white;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+.hero-section {
+  height: 90vh;
+}
+.hero-image {
+  width: auto;
+  height: 70vh;
+  position: relative;
+  /* background-image: url(../img/COVID-vaccine-homepage-banner.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.hero-section .form-inline {
+  background-color: #c3cfd6;
+  width: 80%;
+  display: flex;
+  left: 10%;
+  right: 10%;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: -80px;
+  padding: 60px 10px;
+}
+.hero-section .form-inline button {
+  background-color: var(--btnColor);
+  color: #fff;
+  padding: 7px 60px;
+}
+.hero-section .form-inline label {
+  padding: 10px;
+}
+.hero-section .form-inline select {
+  padding: 10px;
+}
+.card {
+  background-color: var(--cardBg);
+}
+.card .button {
+  background-color: var(--btnColor);
+}
+.card-1 {
+  padding: 1rem;
+  margin: 40px 10%;
+  background-color: white;
+  border: 1px solid gray;
+}
+.recommended-slider {
+  margin-bottom: 20px;
+}
+.recommended-slider .container {
+  background-color: var(--cardBg);
+}
+.recommended-slider .carousel .card {
+  width: 90%;
+  margin: 0 auto;
+  border: none;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 7% !important;
+}
+.carousel-control-prev-icon {
+  width: 40px;
+  height: 40px;
+  /* background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-left-2.png"); */
+}
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  /* background-image: url("https://img.icons8.com/ios-filled/50/000000/circled-right-2.png"); */
+}
+.carousel-control-next {
+  border-bottom: 0;
+  font-size: 40px;
+  color: black;
+}
+
+.carousel-control-prev {
+  border-bottom: 0;
+  font-size: 40px;
+  color: black;
+}
+.recommended-slider h2 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+.recommended-slider .card-1 {
+  padding: 20px;
+  background-color: white;
+}
+.recommended-slider .content {
+  display: flex;
+  justify-content: space-between;
+}
+.recommended-slider .left {
+  display: flex;
+}
+.recommended-slider .left-img {
+  padding-left: 10px;
+}
+.recommended-slider .left-text {
+  padding-left: 20px;
+}
+.recommended-slider .left-text h3 {
+  color: var(--gTextColor);
+}
+.recommended-slider .left-text p {
+  color: var(--tertiaryTextColor);
+}
+.recommended-slider .right {
+  text-align: right;
+  line-height: 12px;
+}
+.recommended-slider .right .greenText {
+  color: var(--gTextColor);
+  font-weight: bold;
+}
+.recommended-slider .right i {
+  color: var(--starColor);
+}
+
+@media only screen and (max-width: 600px) {
+  .recommended-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .recommended-section .content {
+    display: flex;
+  }
+  .recommended-section .left {
+    display: flex;
+    flex-direction: row;
+  }
+  .recommended-section .right {
+    padding-top: 70px;
+    text-align: center;
+  }
+  */ .recommended-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .recommended-slider .content {
+    display: flex;
+  }
+  .recommended-slider .left {
+    display: flex;
+    flex-direction: column;
+  }
+  .recommended-slider .right {
+    padding-top: 70px;
+    text-align: center;
+  }
 }

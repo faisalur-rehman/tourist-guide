@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* color: white; */
+  /* outline: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-oscuro: #101e2b;
+  --box-shadow: 0 0 10px rgba(16, 30, 43, 0.637);
+  --boton-llamar-background: linear-gradient(
+    to left,
+    #ff385c 0%,
+    #e61e4d 27.5%,
+    #e31c5f 40%,
+    #d70466 57.5%,
+    #bd1e59 75%,
+    #bd1e59 100%
+  );
+  --boton-whatsapp-background: linear-gradient(
+    to left,
+    #199692 0%,
+    #15b8aa 27.5%,
+    #13b1a1 40%,
+    #14a4a7 57.5%,
+    #00a1a1 100%
+  );
+  --background-main: linear-gradient(to right, #101e2b, #132233);
+  --text-shadow: 0 0 10px #101e2bd0;
+}
+body {
+  font-family: raleway, sans-serif;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1440px;
+  min-height: 200vh;
+  color: white;
+  position: relative;
+}
+
+/* --------HEADER-------- */
+.header {
+  width: 100%;
+  background: #101e2b;
+}
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 20px;
+  width: 20px;
+}
+.logo-text {
+  margin: 0.3rem;
+  font-family: asap;
+  font-size: 1.2rem;
+  color: white;
+}
+.main-menu__items {
+  display: flex;
+  align-items: center;
+}
+.main-menu__item {
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.fa-user-circle {
+  margin: 0 0.5rem;
+}
+
+/* ----------CTA SECTION---------- */
+/* .section-cta {
+  background-image: url(/assets/images/guia-milan.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+}
+.container-cta {
+  background-color: #101e2b5b;
+  width: 30%;
+  position: absolute;
+  left: 10%;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.main-title {
+  margin: 0.5rem 0;
+}
+.cta-text {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  display: block;
+  margin: 1rem 0;
+}
+.cta-button {
+  background-image: var(--boton-llamar-background);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-size: 200%;
+  color: white;
+} */
+
+/* ------------TOUR LISTING------------ */
+.section-tours {
+  color: #0f1a24;
+  width: 100%;
+  padding: 2rem 0;
+}
+.subtitle {
+  width: 90%;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0.5rem auto 1rem;
+}
+.container-tours {
+  color: #0f1a24;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+}
+.container-tour {
+  margin-bottom: 3rem;
+}
+.enlace-perfil {
+  color: #0f1a24;
+}
+.tour-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+.container-tour__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-guide-name {
+  font-size: 20px;
+  font-weight: 600;
+}
+.fa-star {
+  color: #d70466;
+}
+.container-tour__name {
+}
+.tour-price {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.tour-price::before {
+  content: "Desde";
+  font-weight: 600;
+  font-size: 1.2rem;
+  display: inline-block;
+  margin-right: 0.3rem;
+}
+
+/* ------------FAQ TEXT-------------- */
+.final-text__section {
+  background: #f2f2f2;
+  padding: 2rem 0 2rem;
+}
+.final-text__container {
+  color: #101e2b;
+  width: 90%;
+  margin: 0 auto;
+}
+.subtitle__final-section {
+  width: 100%;
+}
+.details {
+  border: 1px solid #101e2b88;
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.summary {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.subtitle__summary {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.details__text {
+  line-height: 1.7;
+  margin: 0.5rem 0;
+}
+.fa-chevron-down{
+    transition: .5s;
+}
+.details[open] .summary .fa-chevron-down {
+  transform: rotate(180deg);
+  display: block
+  color: ;
+}
+
+/* ------------TABLET-------------- */
+@media screen and (max-width: 900px) {
+  .container-cta {
+    width: 50%;
+    left: 7%;
+  }
+}
+
+/* ------------MOBILE-------------- */
+@media screen and (max-width: 650px) {
+  .section-cta {
+    background-image: url(/assets/images/guia-milan-mobile.jpg);
+    height: 60vh;
+  }
+  .container-cta {
+    background-color: #101e2b8f;
+    width: 70%;
+    left: 5%;
+  }
+  .main-title {
+    font-size: 26px;
+  }
+  .cta-text {
+    line-height: 1.5;
+    font-size: 1rem;
+    display: block;
+    margin: 0.5rem 0 1rem;
+  }
+  .cta-button {
+    background-image: var(--boton-llamar-background);
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-size: 200%;
+    color: white;
+  }
+}
+
+/* -------HOVER EFFECTS--------- */
+@media screen and (min-width: 1100px) {
+  .main-menu__item:hover {
+    background-color: white;
+    color: #101e2b;
+  }
+}

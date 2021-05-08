@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  /* color: white; */
+  /* outline: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-oscuro: #101e2b;
+  --box-shadow: 0 0 10px rgba(16, 30, 43, 0.637);
+  --boton-llamar-background: linear-gradient(
+    to left,
+    #ff385c 0%,
+    #e61e4d 27.5%,
+    #e31c5f 40%,
+    #d70466 57.5%,
+    #bd1e59 75%,
+    #bd1e59 100%
+  );
+  --boton-whatsapp-background: linear-gradient(
+    to left,
+    #199692 0%,
+    #15b8aa 27.5%,
+    #13b1a1 40%,
+    #14a4a7 57.5%,
+    #00a1a1 100%
+  );
+  --background-main: linear-gradient(to right, #101e2b, #132233);
+  --text-shadow: 0 0 10px #101e2bd0;
+}
+body {
+  font-family: raleway, sans-serif;
+  width: 100%;
+  min-width: 300px;
+  /* max-width: 1440px; */
+  min-height: 200vh;
+  color: #101e2b;
+  position: relative;
+}
+
+/* --------HEADER-------- */
+.header {
+  width: 100%;
+  background: #101e2b;
+}
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 20px;
+  width: 20px;
+}
+.logo-text {
+  margin: 0.3rem;
+  font-family: asap;
+  font-size: 1.2rem;
+  color: white;
+}
+.main-menu__items {
+  display: flex;
+  align-items: center;
+}
+.main-menu__item {
+  padding: 1rem;
+  display: block;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.fa-user-circle {
+  margin: 0 0.5rem;
+}
+
+/* ----------CTA SECTION---------- */
+.section-cta {
+  background-image: url(../assets/images/guia-milan.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  color: white;
+}
+.container-cta {
+  background-color: #101e2b5b;
+  width: 30%;
+  position: absolute;
+  left: 10%;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.main-title {
+  margin: 0.5rem 0;
+}
+.cta-text {
+  line-height: 1.5;
+  font-size: 1.1rem;
+  display: block;
+  margin: 1rem 0;
+}
+.cta-button {
+  background-image: var(--boton-llamar-background);
+  display: block;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-size: 200%;
+  color: white;
+}
+
+/* --------------POPUP---------------- */
+.popup-container {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #101e2ba8;
+  transition: 0.4s ease-in-out;
+  transform: translate(-150%, -200%);
+  visibility: hidden;
+}
+.popup {
+  width: 600px;
+  max-width: 90%;
+  height: 80vh;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+.popup-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.popup-button {
+  padding: 1rem;
+  background-image: var(--boton-llamar-background);
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.popup-container:target {
+  visibility: visible;
+  transform: translate(0);
+}
+.popup-close {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #101e2b;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: grid;
+  place-items: center;
+}
+
+/* ------------CITIES LISTING------------ */
+.subtitle {
+  width: 90%;
+  margin: 0.5rem auto;
+}
+.section-cities {
+  width: 100%;
+  margin: 2rem auto;
+}
+.container-cities {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.8rem;
+}
+.container-city {
+  margin-bottom: 1rem;
+  position: relative;
+}
+.city-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+.city-name {
+  background-color: #101e2bb9;
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ------------FAQ TEXT-------------- */
+.final-text__section {
+  background: #f2f2f2;
+  padding: 2rem 0 2rem;
+}
+.final-text__container {
+  color: #101e2b;
+  width: 90%;
+  margin: 0 auto;
+}
+.subtitle__final-section {
+  width: 100%;
+  margin: 1rem 0;
+}
+.details {
+  border: 1px solid #101e2b88;
+  box-shadow: var(--box-shadow);
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1rem;
+}
+.summary {
+  list-style: none;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.subtitle__summary {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.details__text {
+  line-height: 1.7;
+  margin: 0.5rem 0;
+}
+.fa-chevron-down {
+  transition: 0.5s;
+  padding: 0.3rem;
+  border-radius: 50%;
+}
+.details[open] .summary .fa-chevron-down {
+  transform: rotate(180deg);
+  display: block;
+}
+
+/* ------------TABLET-------------- */
+@media screen and (max-width: 900px) {
+  .container-cta {
+    width: 50%;
+    left: 7%;
+  }
+}
+
+/* ------------MOBILE-------------- */
+@media screen and (max-width: 650px) {
+  .section-cta {
+    background-image: url(../assets/images/guia-milan-mobile.jpg);
+    height: 60vh;
+  }
+  .container-cta {
+    background-color: #101e2b8f;
+    width: 70%;
+    left: 5%;
+  }
+  .main-title {
+    font-size: 26px;
+  }
+  .cta-text {
+    line-height: 1.5;
+    font-size: 1rem;
+    display: block;
+    margin: 0.5rem 0 1rem;
+  }
+  .cta-button {
+    background-image: var(--boton-llamar-background);
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-size: 200%;
+    color: white;
+  }
+}
+
+/* -------HOVER EFFECTS--------- */
+@media screen and (min-width: 1100px) {
+  .main-menu__item:hover {
+    background-color: white;
+    color: #101e2b;
+  }
+  .summary:hover .fa-chevron-down {
+    background-color: #e61e4da1;
+    color: #fff;
+  }
+}

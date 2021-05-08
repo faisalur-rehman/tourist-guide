@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@600&family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+  /* margin: 0; */
+  /* padding: 0; */
+  box-sizing: border-box;
+  text-decoration: none;
+  /* color: white; */
+  /* outline: 1px solid red; */
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-oscuro: #101e2b;
+  --box-shadow: 0 0 10px rgba(16, 30, 43, 0.637);
+  --boton-llamar-background: linear-gradient(
+    to left,
+    #ff385c 0%,
+    #e61e4d 27.5%,
+    #e31c5f 40%,
+    #d70466 57.5%,
+    #bd1e59 75%,
+    #bd1e59 100%
+  );
+  --boton-whatsapp-background: linear-gradient(
+    to left,
+    #199692 0%,
+    #15b8aa 27.5%,
+    #13b1a1 40%,
+    #14a4a7 57.5%,
+    #00a1a1 100%
+  );
+  --background-main: linear-gradient(to right, #101e2b, #132233);
+  --text-shadow: 0 0 10px #101e2bd0;
+}
+body {
+  font-family: raleway, sans-serif;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1440px;
+  min-height: 200vh;
+  color: #101e2b;
+  position: relative;
+  margin: 0;
+}
+
+/* --------HEADER-------- */
+.header {
+  width: 100%;
+  background: #101e2b;
+}
+.main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 20px;
+  width: 20px;
+}
+.logo-text {
+  margin: 0.3rem;
+  font-family: asap;
+  font-size: 1.2rem;
+  color: white;
+}
+.main-menu__items {
+  display: flex;
+  align-items: center;
+}
+.main-menu__item {
+  padding: 1.5rem;
+  display: block;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.fa-user-circle {
+  margin: 0 0.5rem;
+}

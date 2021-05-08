@@ -1,0 +1,41 @@
+.hide {
+  display: none;
+}
+.guide-images img {
+  margin-left: 10px;
+  width: 24%;
+}
+.read-only-rating {
+  display: inline-block;
+  vertical-align: middle;
+}
+.tour-guide h1 {
+  margin: 30px;
+  margin-left: 0;
+  margin-top: 30px;
+}
+.introduction p {
+  word-spacing: 0.5rem;
+  text-align: justify;
+}
+.icon {
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.icon-gi {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.general-information p {
+  margin-bottom: 20px;
+}
+.submit {
+  padding: 5px;
+  background-color: #ff0061;
+  color: white;
+  cursor: pointer;
+}
+.reviews {
+  margin-bottom: 20px;
+}
