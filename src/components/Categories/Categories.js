@@ -2,7 +2,7 @@ import React from "react";
 import milan from "../../assets/images/tour-milan.jpg";
 // import roma from "../../assets/images/roma-tours.jpg";
 // import verona from "../../assets/images/verona-city.jpg";
-import javi from "../../assets/images/tour-milan-javi.jpg";
+import javi from "../../assets/images/roma-tours.jpg";
 import "./Categories.css";
 import { Link } from "react-router-dom";
 const Cities = () => {

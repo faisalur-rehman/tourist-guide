@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import guide from "../../assets/images/javi-tour.jpg";
+import guide from "../../assets/images/duomo-milan.jpg";
+import guide1 from "../../assets/images/panoramic-milan.jpg";
 import SimpleAccordion from "../Accordian";
 import Rating from "@material-ui/lab/Rating";
 import Box from "@material-ui/core/Box";
@@ -7,7 +8,10 @@ import "./TourGuide.css";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
 import EuroIcon from "@material-ui/icons/Euro";
 import HourglassFullIcon from "@material-ui/icons/HourglassFull";
-import Button from "@material-ui/core/Button";
+// import { Carousel } from "antd";
+import "antd/dist/antd.css";
+import Carousel from "../Carousel/Carousel";
+import ReviewModel from "../Model/Model";
 
 let detail =
   "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel beatae dolores ad veniam quae impedit omnis quam, odio ipsa, commodi corporis voluptatem modi nemo perspiciatis ipsum sed esse! Dignissimos amet reprehenderit, nisi similique quisquam temporibus animi recusandae sapiente deleniti aliquid labore, modi quaerat at unde quae nesciunt! Nobis, perferendis explicabo.";
@@ -19,15 +23,7 @@ const TourGuide = () => {
   const [show, setShow] = useState(false);
   const [comment, setComment] = useState("");
   const [reviews, setReviews] = useState([]);
-  let shouldShow = show ? "" : "hide";
-  function handleSubmit(e) {
-    e.preventDefault();
-    setReviews((prev) => [...prev, { value, comment }]);
-    console.log(reviews);
-    setShow(false);
-    setComment("");
-    setValue(0);
-  }
+
   return (
     <div className="tour-guide" style={{ margin: "20px 10%" }}>
       <h1>Name</h1>
@@ -41,11 +37,9 @@ const TourGuide = () => {
         </Box>
       </span>
       <span>4.98 (56 reviews)</span>
+
       <div className="guide-images">
-        <img src={guide} alt="" />
-        <img src={guide} alt="" />
-        <img src={guide} alt="" />
-        <img src={guide} alt="" />
+        <Carousel />
       </div>
       <div className="introduction">
         <h1>Introduction</h1>
@@ -130,7 +124,19 @@ const TourGuide = () => {
         >
           Post your review
         </button>
-        <form className={`${shouldShow}`} onSubmit={handleSubmit}>
+        {show && (
+          <ReviewModel
+            show={show}
+            setShow={setShow}
+            comment={comment}
+            setComment={setComment}
+            value={value}
+            setValue={setValue}
+            reviews={reviews}
+            setReviews={setReviews}
+          />
+        )}
+        {/* <form className={`${shouldShow}`} onSubmit={handleSubmit}>
           <Box component="fieldset" borderColor="transparent">
             <Rating
               name="simple-controlled"
@@ -152,7 +158,7 @@ const TourGuide = () => {
           <button className="submit" type="submit">
             Submit
           </button>
-        </form>
+        </form> */}
       </div>
     </div>
   );

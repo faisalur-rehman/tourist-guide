@@ -1,0 +1,22 @@
+.articles {
+  background: #edf2f7;
+  padding-bottom: 20px;
+}
+.articles h2 {
+  font-size: 2rem;
+  padding: 30px 0;
+  width: 72%;
+  display: flex;
+  margin: 8px auto;
+
+  margin-bottom: 15px;
+  border-bottom: 0.5px solid rgb(187, 185, 185);
+}
+.article {
+  margin: 40px 12%;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  margin: 5px !important;
+}
