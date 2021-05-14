@@ -59,6 +59,7 @@ export default function ProfileCard({ src, text }) {
             >
               <Rating name="read-only" value={4} readOnly />
             </Box>
+            <p>(56)</p>
           </div>
         </Typography>
       </CardContent>

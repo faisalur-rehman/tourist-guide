@@ -1,14 +1,20 @@
 .profile {
   margin: 15px;
-  width: 23%;
+  width: 22%;
 }
 .profile-card {
   width: 80%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   margin: auto;
 }
 .guide-text {
   margin-bottom: 0;
+}
+@media screen and (max-width: 968px) {
+  .profile {
+    width: 70%;
+  }
 }

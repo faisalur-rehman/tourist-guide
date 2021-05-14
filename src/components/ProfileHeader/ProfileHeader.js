@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/images/corazon-cuore-2.svg";
 import "../../css/styles.css";
-import SignInModel from "../Model/SigninModel";
-import Profile from "../UserProfile/Profile";
 import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [clicked, setClicked] = useState(false);
+const ProfileHeader = () => {
   return (
     <div>
       <header className="header">
@@ -19,21 +16,21 @@ const Header = () => {
           </div>
           <div className="main-menu__items">
             <ul>
-              {localStorage.getItem("token") ? (
-                <Link to="/user-profile" className="profile-name">
-                  Profile
-                </Link>
-              ) : (
-                <li onClick={() => setClicked(true)}>Sign in</li>
-              )}
-              <li>Contact Us</li>
+              <li>
+                <Link to="/tour-guide/#introduction">Introduction </Link>
+              </li>
+              <li>
+                <Link to="/tour-guide/#introduction">General Information</Link>
+              </li>
+              <li>
+                <Link to="/tour-guide/#introduction">Meeting Point </Link>
+              </li>
             </ul>
           </div>
         </nav>
-        {clicked && <SignInModel setCancel={setClicked} />}
       </header>
     </div>
   );
 };
 
-export default Header;
+export default ProfileHeader;

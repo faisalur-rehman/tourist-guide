@@ -36,6 +36,44 @@ header {
   color: var(--primaryTextColor);
 }
 
+.main-menu__items {
+  color: white;
+  font-size: 1.2rem;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  margin: 10px;
+  vertical-align: middle;
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+ul li a {
+  color: white !important;
+}
+ul li:hover {
+  background: #ff0061 !important;
+  border-radius: 8px;
+  color: white !important;
+}
+.profile-name {
+  color: white !important;
+  margin: 10px;
+  vertical-align: middle;
+  padding: 10px;
+  margin-bottom: 0;
+  /* margin-top: 20px; */
+}
+.profile-name:hover {
+  background: #ff0061;
+  border-radius: 8px;
+  color: white;
+}
 .right p {
   margin: 10px;
 }

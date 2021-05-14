@@ -9,14 +9,16 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TourGuide from "./components/TourGuide/TourGuide";
 import Article from "./components/Articles/Article";
 import Footer from "./components/Footer/Footer";
+import ProfileHeader from "./components/ProfileHeader/ProfileHeader";
+import UserProfile from "./components/UserProfile/Profile";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Switch>
           <Route exact path="/">
+            <Header />
             <Hero />
             {/* <Cities /> */}
             <Categories />
@@ -24,13 +26,20 @@ function App() {
             <Article />
             <Footer />
           </Route>
+          <Route path="/user-profile">
+            <Header />
+            <UserProfile />
+          </Route>
           <Route path="/online-tour-guide">
+            <Header />
             <Profile />
           </Route>
           <Route path="/f2f-tour-guide">
+            <Header />
             <Profile />
           </Route>
-          <Route path="/tour-guide">
+          <Route path="/tour-guide/:id">
+            {/* <ProfileHeader /> */}
             <TourGuide />
           </Route>
         </Switch>
